@@ -6,15 +6,24 @@ body{
     font-size: 4rem;
     padding: 15px;
 }
-.square{
+.square, .square4, .square5, .square6, .square7, .square8, .square9{
     border: 2px solid;
     height: 150px;
     width: 150px;
     padding: 0;
+    display: inline-block;
 }
 .container{
     display: block;
-  width: 50%;
-  margin: auto;
+    width: 50%;
+    margin: auto;
+}
+.x1, .x2, .x3, .x4, .x5, .x6, .x7, .x8, .x9{
+    font-size: 150px;
+    visibility:hidden;
+}
+
+.show{
+    visibility: visible;
 }
 

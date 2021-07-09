@@ -45,86 +45,120 @@ function first(square){
 
 function player2(square){
     var ganaste=false;
-        if(square[0][0]==="x" && square[0][1]==="x" && square[0][2]==="x"){
-            alert("ganaste")
-            ganaste=true;
-        }
-        else if(square[1][0]==="x" && square[1][1]==="x" && square[1][2]==="x"){
-            console.log("ganaste")
-            ganaste=true;
-        }
-        else if(square[2][0]==="x" && square[2][1]==="x" && square[2][2]==="x"){
-            console.log("ganaste")
-            ganaste=true;
-        }
+    if(square[0][0]==="x" && square[0][1]==="x" && square[0][2]==="x"){
+        alert("ganaste")
+        ganaste=true;
+    }
+    else if(square[1][0]==="x" && square[1][1]==="x" && square[1][2]==="x"){
+        alert("ganaste")
+        ganaste=true;
+    }
+    else if(square[2][0]==="x" && square[2][1]==="x" && square[2][2]==="x"){
+        alert("ganaste")
+        ganaste=true;
+    }
         /*----columnas----*/
-        else if(square[0][0]==="x" && square[1][0]==="x" && square[2][0]==="x"){
-            console.log("ganaste")
-            ganaste=true;
-        }
-        else if(square[0][1]==="x" && square[1][1]==="x" && square[2][1]==="x"){
-            console.log("ganaste")
-            ganaste=true;
-        }
-        else if(square[0][2]==="x" && square[1][2]==="x" && square[2][2]==="x"){
-            console.log("ganaste")
-            ganaste=true;
-        }
-        else if(square[0][0]==="x" && square[1][1]==="x" && square[2][2]==="x"){
-            console.log("ganaste")
-            ganaste=true;
-        }
-        else if(square[0][2]==="x" && square[1][1]==="x" && square[2][0]==="x"){
-            console.log("ganaste")
-            ganaste=true;
-        }
-        else if(ganaste===false){
-            /*--------Filas---------*/
-            var i=0;
-            while(i<3){
-            
-            if(square[i][0]!=="x" && square[i][1]==="x" && square[i][2]==="x"){
+    else if(square[0][0]==="x" && square[1][0]==="x" && square[2][0]==="x"){
+        alert("ganaste")
+        ganaste=true;
+    }
+    else if(square[0][1]==="x" && square[1][1]==="x" && square[2][1]==="x"){
+        alert("ganaste")
+        ganaste=true;
+    }
+    else if(square[0][2]==="x" && square[1][2]==="x" && square[2][2]==="x"){
+        alert("ganaste")
+        ganaste=true;
+    }
+    else if(square[0][0]==="x" && square[1][1]==="x" && square[2][2]==="x"){
+        alert("ganaste")
+        ganaste=true;
+    }
+    else if(square[0][2]==="x" && square[1][1]==="x" && square[2][0]==="x"){
+        alert("ganaste")
+        ganaste=true;
+    }
+    else if(ganaste===false){
+        /*------------Filas----------*/
+        var i=0;
+        while(i<3){
+            if(square[i][0]!=="x" && square[i][0]!=="o" && square[i][1]==="x" && square[i][2]==="x"){
                 setTimeout(function(){
-                    alert("workinggggg")
                     $("."+square[i][0])[0].innerHTML="O"
                     $("."+square[i][0]).addClass("show")
                     square[i][0]="o";    
-                }, 3000)
+                }, 2000)
                 break;
             }
-            else if(square[i][0]==="x" && square[i][1]!=="x" && square[i][2]==="x"){
-                alert("workingggg")
-                $("."+square[i][1])[0].innerHTML="O"
-                $("."+square[i][1]).addClass("show")
-                square[i][1]="o"
+            else if(square[i][0]==="x" && square[i][1]!=="x" && square[i][1]!=="o" && square[i][2]==="x"){
+                setTimeout(function(){
+                    $("."+square[i][1])[0].innerHTML="O"
+                    $("."+square[i][1]).addClass("show")
+                    square[i][1]="o"
+                },2000)
                 break;
             }
-            else if(square[i][0]==="x" && square[i][1]==="x" && square[i][2]!=="x"){
-                alert("workingggg")
-                $("."+square[i][2])[0].innerHTML="O"
-                $("."+square[i][2]).addClass("show")
-                square[i][2]="o"
+            else if(square[i][0]==="x" && square[i][1]==="x" && square[i][2]!=="x" && square[i][2]!=="o"){
+                setTimeout(function(){
+                    $("."+square[i][2])[0].innerHTML="O"
+                    $("."+square[i][2]).addClass("show")
+                    square[i][2]="o"
+                }, 2000)
                 break;
                 }
                 else{
-                    /*----------Columnas---------*/
-                    alert("workingggg col")
-                    if(square[0][i]!=="x" && square[1][i]==="x" && square[2][i]==="x"){
-                        $("."+square[0][i])[0].innerHTML="O"
-                        $("."+square[0][i]).addClass("show")
-                        square[0][i]="o"
+                    /*---------Columnas----------*/
+                    if(square[0][i]!=="x" && square[0][i]!=="o" && square[1][i]==="x" && square[2][i]==="x"){
+                        setTimeout(function(){
+                            $("."+square[0][i])[0].innerHTML="O"
+                            $("."+square[0][i]).addClass("show")
+                            square[0][i]="o"
+                        }, 2000);
+                        break;
                     }
-                    else if(square[0][i]==="x" && square[1][i]!=="x" && square[2][j]==="x"){
-                        $("."+square[1][i])[0].innerHTML="O"
-                        $("."+square[1][i]).addClass("show")
-                        square[1][i]="o"
+                    else if(square[0][i]==="x" && square[1][i]!=="x" && square[1][i]!=="o" && square[2][i]==="x"){
+                        setTimeout(function(){
+                            $("."+square[1][i])[0].innerHTML="O"
+                            $("."+square[1][i]).addClass("show")
+                            square[1][i]="o"
+                        },2000);
+                        break;
                     }
-                    else if(square[0][i]==="x" && square[1][i]==="x" && square[2][i]!=="x"){
-                        $("."+square[2][i])[0].innerHTML="O"
-                        $("."+square[2][i]).addClass("show")
-                        square[2][i]="o"
+                    else if(square[0][i]==="x" && square[1][i]==="x" && square[2][i]!=="x" && square[2][i]!=="o"){
+                        setTimeout(function(){
+                            $("."+square[2][i])[0].innerHTML="O"
+                            $("."+square[2][i]).addClass("show")
+                            square[2][i]="o"
+                        }, 2000);
+                        break;
                     }
-                    first(square);
+                    else{
+                        /*---------De ida a derecha-------- */
+                        if(square[0][0]!=="x" && square[0][0]!=="o" && square[1][1]==="x" && square[2][2]==="x"){
+                            setTimeout(function(){
+                                $("."+square[0][0])[0].innerHTML="O"
+                                $("."+square[0][0]).addClass("show")
+                                square[0][0]="o"
+                                }, 2000);
+                                break;
+                        }
+                        else if(square[0][0]==="x" && square[1][1]!="x" && square[1][1]!=="o" && square[2][2]==="x"){
+                            setTimeout(function(){
+                                $("."+square[1][1])[0].innerHTML="O"
+                                $("."+square[1][1]).addClass("show")
+                                square[1][1]="o"
+                                }, 2000);
+                                break;
+                        }
+                        else if(square[0][0]==="x" && square[1][1]==="x" && square[2][2]!=="x" && square[2][2]!="o"){
+                            setTimeout(function(){
+                                $("."+square[2][2])[0].innerHTML="O"
+                                $("."+square[2][2]).addClass("show")
+                                square[2][2]="o"
+                                }, 2000);
+                                break;
+                        }
+                    }
                 }
                 i++;
         }

@@ -150,11 +150,35 @@ function player2(square){
                                 }, 2000);
                                 break;
                         }
-                        else if(square[0][0]==="x" && square[1][1]==="x" && square[2][2]!=="x" && square[2][2]!="o"){
+                        else if(square[0][0]==="x" && square[1][1]==="x" && square[2][2]!=="x" && square[2][2]!=="o"){
                             setTimeout(function(){
                                 $("."+square[2][2])[0].innerHTML="O"
                                 $("."+square[2][2]).addClass("show")
                                 square[2][2]="o"
+                                }, 2000);
+                                break;
+                        }
+                        else if(square[0][2]!=="x" && square[1][1]!="o" && square[1][1]==="x" && square[2][0]==="x"){
+                            setTimeout(function(){
+                                $("."+square[0][2])[0].innerHTML="O"
+                                $("."+square[0][2]).addClass("show")
+                                square[0][2]="o"
+                                }, 2000);
+                                break;
+                        }
+                        else if(square[0][2]==="x" && square[1][1]!="x" && square[1][1]!=="o" && square[2][0]==="x"){
+                            setTimeout(function(){
+                                $("."+square[1][1])[0].innerHTML="O"
+                                $("."+square[1][1]).addClass("show")
+                                square[1][1]="o"
+                                }, 2000);
+                                break;
+                        }
+                        else if(square[0][2]==="x" && square[1][1]==="x" && square[2][0]!=="x" && square[2][0]!=="o"){
+                            setTimeout(function(){
+                                $("."+square[2][0])[0].innerHTML="O"
+                                $("."+square[2][0]).addClass("show")
+                                square[2][0]="o"
                                 }, 2000);
                                 break;
                         }
